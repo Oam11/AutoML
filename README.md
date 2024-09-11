@@ -38,7 +38,6 @@ Ensure you have the following Python packages installed:
 - `langchain`
 - `langchain_experimental`
 - `langchain_groq`
-- `pdfkit`
 - `tabulate` (optional, required for some functionalities)
 
 Install the necessary packages using pip:
