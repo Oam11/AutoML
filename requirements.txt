@@ -1,6 +1,7 @@
 streamlit
 ydata_profiling
 pycaret
+streamlit_ydata_profiling
 scikit-learn
 langchain
 langchain_experimental
