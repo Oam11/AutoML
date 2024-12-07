@@ -24,7 +24,7 @@ def initialize_groq_lemma():
     try:
         api_key = st.secrets["groq"]["api_key"]
         llm = ChatGroq(
-            model="gemma2-9b-it",
+            model="llama-3.2-90b-text-preview",
             temperature=0.2,
             max_tokens=None,
             timeout=None,
