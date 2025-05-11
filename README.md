@@ -1,132 +1,161 @@
-**Python Code Documentation**
+# AutoML 
 
-**Overview**
----------------
+A powerful web application that combines automated machine learning capabilities with interactive data analysis and natural language processing. Built with Streamlit and PyCaret, this application makes machine learning accessible to everyone.
 
-This Python code documentation provides a detailed explanation of the code, its functionality, and its usage. The documentation follows the Google Python Style Guide (PEP 257) for clarity and readability.
+## Features
 
-**Function/Module Description**
--------------------------------
+### 1. Data Management
+- Upload your own CSV datasets with automatic encoding detection
+- Support for 30+ different file encodings including UTF-8, Latin1, and various Asian encodings
+- Choose from pre-loaded sample datasets
+- Automatic data persistence between sessions
 
-The `initialize_groq_lemma` function is designed to initialize a Groq model with a specific language model (LLM). It takes no parameters and returns a reference to the initialized model.
+### 2. Exploratory Data Analysis
+- Interactive data profiling with ydata-profiling
+- Full-page report display with comprehensive statistics
+- Visual data exploration
+- Automatic data type detection and analysis
 
-The `preprocess_text_data` function is used to preprocess text data with TF-IDF. It takes a DataFrame as input, preprocesses it with TF-IDF, and returns the preprocessed DataFrame.
+### 3. Automated Machine Learning
+- **Classification**
+  - Multiple model comparison
+  - Model performance metrics
+  - Model download capability
+- **Regression**
+  - Multiple model comparison
+  - Model performance metrics
+  - Model download capability
+- **Clustering**
+  - K-means clustering
+  - Cluster assignment visualization
+- **Anomaly Detection**
+  - Isolation Forest implementation
+  - Anomaly scoring
+- **Time Series Forecasting**
+  - ARIMA modeling
+  - Time series visualization
+  - Forecast predictions
 
-The `preprocess_with_pca` function is used to preprocess text data with PCA. It takes a DataFrame as input, preprocesses it with PCA, and returns the preprocessed DataFrame.
+### 4. Advanced Preprocessing
+- TF-IDF text preprocessing with customizable features
+- PCA dimensionality reduction
+- Automatic feature engineering
+- Support for mixed data types
+- Text data transformation
 
-The `Langchain_experimental_agents` function is used to create a PandaDataFrame agent using the Langchain experimental agents library.
+### 5. Natural Language Interface
+- Powered by Groq's Llama 3.3 70B model
+- Interactive data exploration through natural language
+- Intelligent data analysis responses
+- Context-aware question answering
 
-The `Langchain_mixed_data` function is used to integrate the Langchain experimental agents and the GroqMixtral library to create a mixed data preprocessing pipeline.
+## Installation
 
-**Main Features**
-------------------
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/AutoML.git
+cd AutoML
+```
 
-1. **Initialization of Groq model**: The `initialize_groq_lemma` function initializes a Groq model with a specific language model (LLM).
-2. **Text data preprocessing**: The `preprocess_text_data` function preprocesses text data with TF-IDF and returns the preprocessed DataFrame.
-3. **Text data preprocessing with PCA**: The `preprocess_with_pca` function preprocesses text data with PCA and returns the preprocessed DataFrame.
-4. **Integration of Langchain and Groq**: The `Langchain_experimental_agents` function creates a PandaDataFrame agent using Langchain and the GroqMixtral library together.
-5. **Integration of Langchain and Groq for mixed data**: The `Langchain_mixed_data` function integrates Langchain and Groq for mixed data preprocessing.
-6. **Machine learning and text data analysis**: The `Machine Learning Section` uses Langchain and Groq to analyze text data and train machine learning models.
+2. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
 
-**Core functionalities**
-----------------------
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-1. **TF-IDF preprocessing**: The `preprocess_text_data` function preprocesses text data with TF-IDF.
-2. **PCA preprocessing**: The `preprocess_with_pca` function preprocesses text data with PCA.
-3. **Language model initialization**: The `initialize_groq_lemma` function initializes a language model (LLM) with a specific library.
-4. **Mixed data preprocessing pipeline**: The `Langchain_mixed_data` function integrates Langchain and Groq for mixed data preprocessing.
+4. Create a `.streamlit/secrets.toml` file with your Groq API key:
+```toml
+[groq]
+api_key = "your-groq-api-key"
+```
 
-**Parameters**
---------------
+## Usage
 
-### `initialize_groq_lemma` Function
+1. Start the Streamlit app:
+```bash
+streamlit run app.py
+```
 
-*   `api_key`: A required parameter for initializing the Groq model.
-*   `temperature`: A variable parameter for training the language model.
+2. Navigate through the different sections using the sidebar:
+   - **Upload Dataset**: Import your own CSV files with automatic encoding detection
+   - **Use Sample Dataset**: Choose from pre-loaded datasets
+   - **Exploratory Data Analysis**: View detailed data profiles
+   - **Machine Learning**: Run automated ML tasks
+   - **Ask Questions**: Interact with your data using natural language
 
-### `preprocess_text_data` Function
+## Supported Sample Datasets
 
-*   `df`: The input DataFrame with text data.
+### Classification
+- Iris: Classic classification dataset
+- Diabetes: Medical classification dataset
+- Bank: Banking customer classification
 
-### `preprocess_with_pca` Function
+### Regression
+- Boston: Housing price prediction
+- Insurance: Insurance cost prediction
 
-*   `df`: The input DataFrame with text data.
+### Clustering
+- Wine: Wine quality clustering
 
-### `Langchain_experimental_agents` Function
+### Anomaly Detection
+- Credit Card: Credit card fraud detection
 
-*   `llm`: A required parameter for creating a PandaDataFrame agent.
+### Time Series
+- Airline: Airline passenger forecasting
 
-### `Langchain_mixed_data` Function
+## Model Features
 
-*   `llm`: A required parameter for creating a PandaDataFrame agent.
-*   `df`: The input DataFrame with text data.
+### Classification & Regression
+- Multiple model comparison
+- Performance metrics visualization
+- Model download capability
+- Feature importance analysis
+- Optional preprocessing with TF-IDF or PCA
 
-**Name**
-------
+### Clustering
+- K-means implementation
+- Cluster visualization
+- Cluster assignment export
 
-*   `initialize_groq_lemma`: `Leomelem` (with underscores)
-*   `preprocess_text_data`: `Textid` (with underscores)
-*   `preprocess_with_pca`: `Pacid` (with underscores)
-*   `Langchain_experimental_agents`: `Langid`
-*   `Langchain_mixed_data`: `Mlexpt`
+### Anomaly Detection
+- Isolation Forest algorithm
+- Anomaly score calculation
+- Threshold-based detection
 
-**Attributes**
-------------
+### Time Series
+- ARIMA modeling
+- Forecast visualization
+- Time series decomposition
 
-### `initialize_groq_lemma` Function
+## Requirements
 
-*   `api_key`: A string value.
-*   `temperature`: An object value.
+The project uses the following main packages:
+- streamlit
+- pycaret
+- ydata-profiling
+- langchain
+- groq
+- pandas
+- numpy
+- scikit-learn
+- plotly
+- matplotlib
+- seaborn
 
-### `preprocess_text_data` Function
+For a complete list of dependencies, see `requirements.txt`.
 
-*   `text_columns`: A pandas Series containing the text columns.
+## Contributing
 
-### `preprocess_with_pca` Function
+Contributions are welcome! Please feel free to submit a Pull Request. When contributing:
+1. Fork the repository
+2. Create a new branch for your feature
+3. Submit a pull request with a clear description of your changes
 
-*   `tfidf_vectorizer` is a pandas `Vectorizer` object.
-*   `pca_result` is a pandas DataFrame containing the PCA results.
+## License
 
-**Methods**
-------------
-
-### `initialize_groq_lemma` Function
-
-*   `leomelem()` : Initializes a Groq model with an LLM.
-*   `temperature` : Initializes a language model with a temperature value.
-*   `leomelem()` : Initializes a Groq model with a language model.
-
-### `preprocess_text_data` Function
-
-*   `.fit_transform(df[text_columns].astype(str).agg(' '.join, axis=1))` : Preprocesses text data with TF-IDF.
-*   `.toarray()` : Returns the preprocessed DataFrame with TF-IDF.
-*   `.reset_index(drop=True)` : Resets the index of the preprocessed DataFrame.
-*   .return_` : Returns the preprocessed DataFrame.
-
-### `preprocess_with_pca` Function
-
-*   .fit_transform(tfidf_matrix.toarray()) : Preprocesses text data with PCA.
-*   .return_ ` : Returns the preprocessed DataFrame.
-
-### `Langchain_experimental_agents` Function
-
-*   `.setup() : Creates a PandaDataFrame agent using Langchain.
-*   `.compare_models() : Compares two machine learning models.
-*   `.save_model() : Saves the best machine learning model.
-*   `.load_model() : Loads a saved machine learning model.
-*   `.run() : Runs a machine learning model on a specific question.
-
-### `Langchain_mixed_data` Function
-
-*   `.leomelem() : Initializes a language model with a specific library.
-*   `.create_dataframe(llm, df, verbose=True, allow_dangerous_code=True) : Creates a mixed data DataFrame using Langchain and Groq.
-*   `.reset_index(drop=True) : Resets the index of the mixed data DataFrame.
-*   `.return_` : Returns the mixed data DataFrame.
-
-### `Machine Learning Section` Function
-
-*   `.create_dataframe(llm, df, verbose=True, allow_dangerous_code=True) : Creates a mixed data DataFrame using Langchain and Groq.
-*   `.load_model() :loads a saved machine learning model.
-*   `.run(question) : Runs the machine learning model on a specific question.
-*   `.answer(answer) : Returns the answer to the question.
-*   `.save_model(model, filename) : Saves the best machine learning model.
+This project is licensed under the MIT License - see the LICENSE file for details.
