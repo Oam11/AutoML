@@ -7,3 +7,4 @@ numpy
 langchain
 langchain-experimental
 langchain-groq
+tabulate
